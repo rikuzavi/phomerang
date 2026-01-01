@@ -1,0 +1,39 @@
+
+body{
+    scroll-behavior: smooth;
+    background: #222831;
+    width: 100%;
+}
+
+.edits{
+    transition: all 1s;
+    animation: editsanim 8s 1s ease-in-out infinite alternate;
+}
+
+@keyframes editsanim{
+    0%   { transform: translateY(0px); }
+    25%  { transform: translateY(-40px); }
+    50%  { transform: translateY(-80px); }
+    75%  { transform: translateY(-122px); }
+    100%  { transform: translateY(-162px);}
+}
+
+.mainimg{
+    transition: all 0.3s;
+}
+
+
+.animatepics {
+  animation: scroll-left 20s linear infinite;
+}
+
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+

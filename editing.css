@@ -1,0 +1,243 @@
+body{
+    scrollbar-width: smooth;
+    background: #222831;
+}
+
+
+/* #mainimg{
+  z-index: 1;
+} */
+
+/* LANDSCAPE */
+/* 1. Bright Dawn */
+.filter-dawn { backdrop-filter: brightness(1.2) contrast(1.1) saturate(1.2); }
+
+/* 2. Golden Hour */
+.filter-golden { backdrop-filter: sepia(0.4) saturate(1.4) brightness(1.1); }
+
+/* 3. Misty Morning */
+.filter-misty { backdrop-filter: brightness(1.15) contrast(0.9) saturate(0.8); }
+
+/* 4. Deep Forest */
+.filter-forest { backdrop-filter: contrast(1.2) saturate(1.3) hue-rotate(-10deg); }
+
+/* 5. Ocean Blue */
+.filter-ocean { backdrop-filter: saturate(1.2) brightness(1.05); background-color: rgb(41, 41, 105);opacity: 0.5;}
+
+/* 6. Desert Heat */
+.filter-desert { backdrop-filter: contrast(1.15) brightness(1.2) sepia(0.3) saturate(1.3); }
+
+/* 7. Vintage Field */
+.filter-vintage { backdrop-filter: sepia(0.6) contrast(1.05) brightness(1.1); }
+
+/* 8. Sunset Glow */
+.filter-sunset { backdrop-filter: brightness(1.1) contrast(1.2) saturate(1.5) hue-rotate(-15deg); }
+
+/* 9. Cloudy Day */
+.filter-cloudy { backdrop-filter: brightness(0.95) contrast(0.85) saturate(0.7); }
+
+/* 10. Winter Chill */
+.filter-winter { backdrop-filter: brightness(1.1) contrast(1.05) saturate(0.8) hue-rotate(200deg); background-color: lightskyblue;opacity: 0.4; }
+
+/* 11. Autumn Leaves */
+.filter-autumn { backdrop-filter: sepia(0.5) saturate(1.3) hue-rotate(-20deg); }
+
+/* 12. Rainy Mood */
+.filter-rainy { backdrop-filter: brightness(0.9) contrast(1.1) saturate(0.7); }
+
+/* 13. Dreamscape */
+.filter-dream { backdrop-filter: brightness(1.25) saturate(1.2) blur(1px); }
+
+/* 14. Nightfall */
+.filter-night { backdrop-filter: brightness(0.7) contrast(1.3) saturate(1.1); }
+
+/* 15. Lush Green */
+.filter-green { backdrop-filter: saturate(1.8) brightness(1.05) contrast(1.1); background-color: lightgreen;opacity: 0.2; }
+
+/* 16. Warm Earth */
+.filter-earth { backdrop-filter: sepia(0.3) brightness(1.05) saturate(1.2); }
+
+/* 17. Frosted */
+.filter-frost { backdrop-filter: brightness(1.2) contrast(0.95) saturate(0.7); }
+
+/* 18. Clear Skies */
+.filter-sky { backdrop-filter: brightness(1.1) contrast(1.05) saturate(1.4); }
+
+/* 19. Dramatic */
+.filter-dramatic { backdrop-filter: brightness(0.9) contrast(1.4) saturate(1.2); }
+
+/* 20. Monochrome */
+.filter-mono { backdrop-filter: grayscale(1) contrast(1.2) brightness(1.1); }
+
+/* 21. Soft Pastel */
+.filter-pastel { backdrop-filter: brightness(1.15) saturate(0.8) contrast(0.9); }
+
+/* 22. High Contrast */
+.filter-highc { backdrop-filter: brightness(1.1) contrast(1.5) saturate(1.2); }
+
+/* 23. Warm Glow */
+.filter-glow { backdrop-filter: brightness(1.2) contrast(1.05) sepia(0.2); }
+
+/* 24. Cold Steel */
+.filter-steel { backdrop-filter: brightness(0.95) contrast(1.2) saturate(0.9) hue-rotate(210deg);background-color: steelblue; opacity: 0.2; }
+
+/* 25. Moody Shadows */
+.filter-moody { backdrop-filter: brightness(0.8) contrast(1.3) saturate(0.9); }
+
+/* 26. Light Breeze */
+.filter-breeze { backdrop-filter: brightness(1.25) contrast(0.95) saturate(1.1); }
+
+/* 27. Infrared */
+.filter-infrared { backdrop-filter: hue-rotate(180deg) contrast(1.2) saturate(1.3); }
+
+/* 28. Sepia Dream */
+.filter-sepia { backdrop-filter: sepia(0.8) contrast(1.1) brightness(1.05); }
+
+/* 29. Shadowed Forest */
+.filter-shadowforest { backdrop-filter: brightness(0.85) contrast(1.2) saturate(1.1) hue-rotate(-15deg); }
+
+/* 30. Crystal Clear */
+.filter-crystal { backdrop-filter: brightness(1.3) contrast(1.1) saturate(1.5); }
+
+
+/* Base filter button (no effect) */
+.portrait-normal {
+  backdrop-filter: none;
+}
+
+/* Smooth glow on skin tones */
+.portrait-softglow {
+  backdrop-filter: brightness(1.05) contrast(0.95) saturate(1.1) blur(1px);
+}
+
+/* Strong contrast for dramatic portraits */
+.portrait-highcontrast {
+  backdrop-filter: contrast(1.4) brightness(1.1);
+}
+
+/* Sharper face details */
+.portrait-clarityboost {
+  backdrop-filter: contrast(1.2) brightness(1.05) saturate(1.15);
+}
+
+/* Smoother skin look */
+.portrait-smoothskin {
+  backdrop-filter: brightness(1.05) contrast(0.9) blur(0.5px);
+}
+
+/* Dreamy pastel glow */
+.portrait-dreamy {
+  backdrop-filter: brightness(1.2) contrast(0.85) saturate(1.2) blur(1px);
+}
+
+/* Matte film-like finish */
+.portrait-matte {
+  backdrop-filter: brightness(1.05) contrast(0.8) saturate(0.9);
+}
+
+/* Cinematic portrait */
+.portrait-cinematic {
+  backdrop-filter: contrast(1.3) brightness(0.95) saturate(1.05);
+}
+
+/* Faded retro look */
+.portrait-faded {
+  backdrop-filter: brightness(1.1) contrast(0.8) saturate(0.85);
+}
+
+/* Brightened facial tones */
+.portrait-brightface {
+  backdrop-filter: brightness(1.25) contrast(0.95) saturate(1.05);
+}
+
+/* Warm sunny glow */
+.portrait-sunkissed {
+  backdrop-filter: brightness(1.1) contrast(1.05) sepia(0.2) saturate(1.2);
+}
+
+/* Vintage glamour */
+.portrait-vintageglam {
+  backdrop-filter: sepia(0.6) contrast(1.1) brightness(1.05);
+}
+
+/* Classic black & white */
+.portrait-monochrome {
+  backdrop-filter: grayscale(1) contrast(1.2);
+}
+
+/* Soft black & white (gentle) */
+.portrait-softbw {
+  backdrop-filter: grayscale(1) brightness(1.1) contrast(0.9);
+}
+
+/* Warm tone overlay */
+.portrait-warmtone {
+  backdrop-filter: sepia(0.3) saturate(1.1) brightness(1.05);
+}
+
+/* Cool tone overlay */
+.portrait-cooltone {
+  backdrop-filter: saturate(0.9) brightness(1.05) contrast(2);
+  background-color : blueviolet;
+  opacity: 0.2;
+}
+
+/* Natural glow enhancement */
+.portrait-naturalglow {
+  backdrop-filter: brightness(1.15) contrast(1.05) saturate(1.1);
+}
+
+/* Slight sharpening */
+.portrait-sharpened {
+  backdrop-filter: contrast(1.25) brightness(1.05);
+}
+
+/* Studio lighting effect */
+.portrait-studio {
+  backdrop-filter: brightness(1.2) contrast(1.15) saturate(1.05);
+}
+
+/* Glamour fashion look */
+.portrait-glamour {
+  backdrop-filter: brightness(1.1) contrast(1.2) saturate(1.25);
+}
+
+
+
+.vintage-normal {
+  backdrop-filter: none;
+}
+/* Classic balanced vintage look */
+.vintage-classic {
+  backdrop-filter: sepia(0.3) contrast(1.1) brightness(1.05) saturate(0.9)
+}
+
+/* Soft washed-out faded effect */
+.vintage-faded {
+  backdrop-filter: brightness(1.1) contrast(0.85) saturate(0.8);
+}
+
+/* Warm sepia tone */
+.vintage-sepia {
+  backdrop-filter: sepia(1) contrast(1.05) brightness(1);
+}
+
+/* Retro old-photo vibes */
+.vintage-retro {
+  backdrop-filter: sepia(0.4) saturate(0.9) hue-rotate(-15deg) contrast(1.1);
+}
+
+/* Dusty film-like finish */
+.vintage-dusty {
+  backdrop-filter: brightness(0.95) contrast(0.9) sepia(0.25) saturate(0.8);
+}
+
+/* Polaroid instant photo feel */
+.vintage-polaroid {
+  backdrop-filter: sepia(0.5) contrast(1.15) brightness(1.05) saturate(1.1);
+}
+
+
+#crop-container{
+  position: relative;
+}
