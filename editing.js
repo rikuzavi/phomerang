@@ -893,7 +893,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   </body>
   </html>`;
 
-  const res = await fetch("https://phomerang-backend-m75dw8ame-shaswata-das-projects-54d16cf6.vercel.app/api/render", {
+  const res = await fetch("https://phomerang-backend.vercel.app/api/render", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ html })
@@ -910,4 +910,5 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
