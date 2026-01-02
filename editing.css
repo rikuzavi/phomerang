@@ -3,7 +3,9 @@ body{
     background: #222831;
 }
 
-
+#crop-container{
+  touch-action: none;
+}
 /* #mainimg{
   z-index: 1;
 } */
@@ -240,4 +242,5 @@ body{
 
 #crop-container{
   position: relative;
+
 }
