@@ -587,7 +587,7 @@ for(let i of cropran){
 
 // this part contains movement of the crop-container
 // means if we want to adjust the conatiner position
-document.getElementById('crop-container').addEventListener('mousedown', (e) => {
+document.getElementById('crop-container').addEventListener('pointerdown', (e) => {
   if(!imgdragging) return;
   posdragging = true;
   mainimg.style.zIndex = 1
@@ -596,7 +596,7 @@ document.getElementById('crop-container').addEventListener('mousedown', (e) => {
   e.preventDefault(); // prevent text/image selection
 });
 
-document.addEventListener('mousemove', (e) => {
+document.addEventListener('pointermove', (e) => {
   if (!posdragging) return;
   posX += e.clientX - startX;
   posY += e.clientY - startY;
@@ -606,7 +606,7 @@ document.addEventListener('mousemove', (e) => {
   cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
 });
 
-document.addEventListener('mouseup', () => {
+document.addEventListener('pointerup', () => {
   mainimg.style.zIndex = 0
   posdragging = false;
 });
@@ -910,5 +910,6 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
