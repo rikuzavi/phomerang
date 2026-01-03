@@ -565,7 +565,7 @@ for(let i of cropran){
         else if(i.name == 'zoom'){
           scale = `scale(${i.value*0.05})`
         }
-        cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+        mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
     })
 
     i.addEventListener('click',()=>{
@@ -581,7 +581,7 @@ for(let i of cropran){
         else if(i.name == 'flip-down'){
           rotateX = `rotateX(0deg)`
         }
-        cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+        mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
     })
 }
 
@@ -603,7 +603,7 @@ document.addEventListener('pointermove', (e) => {
   startX = e.clientX;
   startY = e.clientY;
   
-  cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+  mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
 });
 
 document.addEventListener('pointerup', () => {
@@ -633,67 +633,67 @@ for(let i of cropping){
     if(i.name=='bottomcrop'){
       b=i.value
     }
-    cropcontainer.style.clipPath=`inset(${t}% ${r}% ${b}% ${l}%)`
+    mainimg.style.clipPath=`inset(${t}% ${r}% ${b}% ${l}%)`
   })
 }
 
 // when cropping is done then savecrop btn will save the crop container
-document.getElementById('savecrop').addEventListener('click', () => {
-  const mainimg = document.getElementById('mainimg');
-  const cropContainer = document.getElementById('crop-container');
-  if (!mainimg) return;
+// document.getElementById('savecrop').addEventListener('click', () => {
+//   const mainimg = document.getElementById('mainimg');
+//   const cropContainer = document.getElementById('crop-container');
+//   if (!mainimg) return;
 
-  const prevClip = cropContainer.style.clipPath;
-  cropContainer.style.clipPath = 'none';
+//   const prevClip = cropContainer.style.clipPath;
+//   cropContainer.style.clipPath = 'none';
 
-  const rect = mainimg.getBoundingClientRect();
-  const width = rect.width;
-  const height = rect.height;
+//   const rect = mainimg.getBoundingClientRect();
+//   const width = rect.width;
+//   const height = rect.height;
 
-  const cropLeft = (l / 100) * width;
-  const cropRight = (r / 100) * width;
-  const cropTop = (t / 100) * height;
-  const cropBottom = (b / 100) * height;
+//   const cropLeft = (l / 100) * width;
+//   const cropRight = (r / 100) * width;
+//   const cropTop = (t / 100) * height;
+//   const cropBottom = (b / 100) * height;
 
-  const cropWidth = width - cropLeft - cropRight;
-  const cropHeight = height - cropTop - cropBottom;
+//   const cropWidth = width - cropLeft - cropRight;
+//   const cropHeight = height - cropTop - cropBottom;
 
-  const canvas = document.createElement('canvas');
-  canvas.width = cropWidth;
-  canvas.height = cropHeight;
-  const ctx = canvas.getContext('2d');
+//   const canvas = document.createElement('canvas');
+//   canvas.width = cropWidth;
+//   canvas.height = cropHeight;
+//   const ctx = canvas.getContext('2d');
 
-  const img = new Image();
-  img.src = mainimg.src;
-  img.onload = () => {
-    ctx.drawImage(
-      img,
-      (img.width * cropLeft) / width,
-      (img.height * cropTop) / height,
-      (img.width * cropWidth) / width,
-      (img.height * cropHeight) / height,
-      0,
-      0,
-      cropWidth,
-      cropHeight
-    );
+//   const img = new Image();
+//   img.src = mainimg.src;
+//   img.onload = () => {
+//     ctx.drawImage(
+//       img,
+//       (img.width * cropLeft) / width,
+//       (img.height * cropTop) / height,
+//       (img.width * cropWidth) / width,
+//       (img.height * cropHeight) / height,
+//       0,
+//       0,
+//       cropWidth,
+//       cropHeight
+//     );
 
-    // ✅ Replace the old image with cropped one
-    const croppedData = canvas.toDataURL('image/png');
-    mainimg.src = croppedData;
+//     // ✅ Replace the old image with cropped one
+//     const croppedData = canvas.toDataURL('image/png');
+//     mainimg.src = croppedData;
 
-    // Reset crop values and remove clipPath
-    cropContainer.style.clipPath = 'none';
-    l = r = t = b = 0;
+//     // Reset crop values and remove clipPath
+//     cropContainer.style.clipPath = 'none';
+//     l = r = t = b = 0;
 
-    // Optionally resize container to fit the new cropped image
-    mainimg.style.width = `${cropWidth}px`;
-    mainimg.style.height = `${cropHeight}px`;
-    for(let i of cropping){
-      i.value = 0
-    }
-  };
-});
+//     // Optionally resize container to fit the new cropped image
+//     mainimg.style.width = `${cropWidth}px`;
+//     mainimg.style.height = `${cropHeight}px`;
+//     for(let i of cropping){
+//       i.value = 0
+//     }
+//   };
+// });
 
 
 // total reset button that resets everything
@@ -706,20 +706,24 @@ for (let i of redo) {
     if (i.getAttribute('name') === 'rotate') {
       document.getElementsByName('rotate')[0].value = 0;
       rotate = `rotate(0deg)`
-      cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+      mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
     }
     else if (i.getAttribute('name') === 'zoom') {
       document.getElementsByName('zoom')[0].value = 0;
       scale = `scale(1)`
-      cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+      mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
     }
     else if (i.getAttribute('name') === 'flip') {
       rotateY = `rotateY(0deg)`
       rotateX = `rotateX(0deg)`
-      cropcontainer.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
+      mainimg.style.transform = `translate(${posX}px, ${posY}px) ${rotate} ${rotateX} ${rotateY} ${scale}`;
     }
     else if (i.getAttribute('name') === 'crop') {
-      location.reload()
+      mainimg.style.clipPath=`inset(0% 0% 0% 0%)`
+      document.getElementsByName('leftcrop')[0].value = 0;
+      document.getElementsByName('rightcrop')[0].value = 0;
+      document.getElementsByName('topcrop')[0].value = 0;
+      document.getElementsByName('bottomcrop')[0].value = 0;
     }
     else if (i.getAttribute('name') === 'brightness') {
       document.getElementsByName('brightness')[0].value = 50;
@@ -910,6 +914,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
 
