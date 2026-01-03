@@ -889,7 +889,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
     </style>
   </head>
   <body>
-    ${div}
+    ${div.outerHTML}
   </body>
   </html>`;
 
@@ -910,6 +910,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
 
