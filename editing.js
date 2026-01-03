@@ -873,7 +873,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-square")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"animate-spin")
   
-  const div = document.getElementById("crop-container");
+  const div = document.getElementById("imgdiv");
 
   const html = `
   <html>
@@ -889,7 +889,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
     </style>
   </head>
   <body>
-    ${div.outerHTML}
+    ${div}
   </body>
   </html>`;
 
@@ -910,6 +910,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
 
