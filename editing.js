@@ -529,19 +529,16 @@ for(let i of texturefilter){
         textures.style.backgroundImage = 'url("https://img.freepik.com/free-photo/vintage-vignitte-textured-paper-background_53876-108277.jpg?semt=ais_hybrid&w=740&q=80")'
       }
       else if(i.name == 'lense-glare01'){
-        textures.style.backgroundImage = 'url("https://static.vecteezy.com/system/resources/previews/022/510/775/large_2x/rainbow-lens-optical-flare-film-dust-overlay-effect-vintage-abstract-bokeh-light-leaks-retro-camera-defocused-blur-reflection-bright-sunlights-use-screen-overlay-mode-for-processing-free-photo.jpg")'
+        textures.style.backgroundImage = 'url("https://www.shutterstock.com/shutterstock/videos/1020960538/thumb/1.jpg?ip=x480")'
       }
       else if(i.name == 'lense-glare02'){
-        textures.style.backgroundImage = 'url("https://static.vecteezy.com/system/resources/previews/022/510/820/non_2x/rainbow-lens-optical-flare-film-dust-overlay-effect-vintage-abstract-bokeh-light-leaks-retro-camera-defocused-blur-reflection-bright-sunlights-use-screen-overlay-mode-for-processing-free-photo.jpg")'
+        textures.style.backgroundImage = 'url("https://www.shutterstock.com/image-vector/film-leak-light-overlay-texture-600nw-2466856775.jpg")'
       }
       else if(i.name == 'lense-glare03'){
-        textures.style.backgroundImage = 'url("https://static.vecteezy.com/system/resources/previews/022/510/557/non_2x/rainbow-lens-optical-flare-film-dust-overlay-effect-vintage-abstract-bokeh-light-leaks-retro-camera-defocused-blur-reflection-bright-sunlights-use-screen-overlay-mode-for-processing-free-photo.jpg")'
+        textures.style.backgroundImage = 'url("https://media.istockphoto.com/id/1313292006/photo/background-of-retro-film-overly-image-with-scratch-dust-and-light-leaks.jpg?s=612x612&w=0&k=20&c=eWVuAxWoJL_H6cBwCgnHS0qZgjgd5H8YaeXb0oJj3ss=")'
       }
       else if(i.name == 'lense-glare04'){
-        textures.style.backgroundImage = 'url("https://media.istockphoto.com/id/1417215285/photo/red-light-and-lens-flare.jpg?s=612x612&w=0&k=20&c=PKWmrkDhSDmPPOm-16nH3hIB8QhIZBbVDaAPCpZ_irw=")'
-      }
-      else if(i.name == 'bubble-blur1'){
-        textures.style.backgroundImage = 'url("https://img.freepik.com/free-vector/realistic-bokeh-effect-background_23-2148966752.jpg")'
+        textures.style.backgroundImage = 'url("https://img.freepik.com/free-vector/black-background-with-abstract-light-flare-effects_107791-25669.jpg?semt=ais_hybrid&w=740&q=80=")'
       }
     })
 }
@@ -914,6 +911,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
 
