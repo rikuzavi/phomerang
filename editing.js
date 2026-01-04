@@ -538,7 +538,7 @@ for(let i of texturefilter){
         textures.style.backgroundImage = 'url("https://media.istockphoto.com/id/1313292006/photo/background-of-retro-film-overly-image-with-scratch-dust-and-light-leaks.jpg?s=612x612&w=0&k=20&c=eWVuAxWoJL_H6cBwCgnHS0qZgjgd5H8YaeXb0oJj3ss=")'
       }
       else if(i.name == 'lense-glare04'){
-        textures.style.backgroundImage = 'url("https://img.freepik.com/free-vector/black-background-with-abstract-light-flare-effects_107791-25669.jpg?semt=ais_hybrid&w=740&q=80=")'
+        textures.style.backgroundImage = 'url("https://media.istockphoto.com/id/1397374517/photo/colorful-light-leak-on-black-background.jpg?s=612x612&w=0&k=20&c=ifj1UgyfomXZfgBnyy76S3WsnVQW5u14ffR-PoPvU3M=")'
       }
     })
 }
@@ -911,6 +911,7 @@ document.getElementById("downloadimg").addEventListener("click", async () => {
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[2],"fa-download")
   document.getElementById('downloadimg').classList.replace(document.getElementById('downloadimg').classList[3],"none")
 });
+
 
 
 
